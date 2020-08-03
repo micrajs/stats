@@ -1,7 +1,6 @@
 {
-  "name": "library-template",
+  "name": "@micra/library-template",
   "version": "0.0.1",
-  "repository": "git@github.com:micrajs/library-template.git",
   "author": "Olavo Amorim Santos<contact@micra.dev>",
   "license": "MIT",
   "main": ".micra/index.cjs.js",
