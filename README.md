@@ -6,8 +6,8 @@
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/npm/v/{{PKG}}.svg">
-  <img alt="issues" src="https://img.shields.io/github/issues/micrajs/{{NAME}}.svg">
-  <img alt="prs" src="https://img.shields.io/github/issues-pr/micrajs/{{NAME}}.svg">
+  <img alt="issues" src="https://img.shields.io/github/issues/micrajs/{{NAME.LOWECASE}}.svg">
+  <img alt="prs" src="https://img.shields.io/github/issues-pr/micrajs/{{NAME.LOWECASE}}.svg">
 </p>
 
 <hr />
@@ -19,7 +19,7 @@
 ## Installation
 
 ```sh
-yarn add {{NAME}}
+yarn add {{PKG}}
 ```
 
 ## Author
