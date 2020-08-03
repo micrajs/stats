@@ -6,8 +6,8 @@
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/npm/v/{{{PKG}}}.svg">
-  <img alt="issues" src="https://img.shields.io/github/issues/{{{REPO}}}/{{{NAME.LOWECASE}}}.svg">
-  <img alt="prs" src="https://img.shields.io/github/issues-pr/{{{REPO}}}/{{{NAME.LOWECASE}}}.svg">
+  <img alt="issues" src="https://img.shields.io/github/issues/{{{REPO}}}/{{{NAME.LOWERCASE}}}.svg">
+  <img alt="prs" src="https://img.shields.io/github/issues-pr/{{{REPO}}}/{{{NAME.LOWERCASE}}}.svg">
 </p>
 
 <hr />
