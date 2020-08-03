@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=".assets/logo.png?raw=true" width="25%">
+  <img src=".config/assets/logo.png?raw=true" width="25%">
 </div>
 
 <h1 align="center">{{NAME}}</h1>
