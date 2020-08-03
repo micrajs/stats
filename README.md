@@ -2,7 +2,7 @@
   <img src=".assets/logo.png?raw=true" width="25%">
 </div>
 
-<h1 style="text-align: center">{{NAME}}</h1>
+<h1 align="center">{{NAME}}</h1>
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/npm/v/{{NAME}}.svg">
