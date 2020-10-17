@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/micrajs/jsos/latest/.config/assets/logo.png" width="25%">
+  <img src="https://raw.githubusercontent.com/micrajs/micrajs/live/.assets/logo.png" width="25%">
 </p>
 
 <h1 align="center">{{{PKG}}}</h1>
