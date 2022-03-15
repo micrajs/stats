@@ -29,6 +29,7 @@
     "@micra/commit-lint-config": "github:micrajs/commit-lint-config#next",
     "@micra/eslint-config": "github:micrajs/eslint-config#next",
     "@micra/typescript-config": "github:micrajs/typescript-config#next",
+    "@micra/vite-config": "github:micrajs/vite-config#next",
     "@types/node": "^17.0.21",
     "c8": "^7.11.0",
     "concurrently": "^7.0.0",

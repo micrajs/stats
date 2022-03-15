@@ -5,6 +5,7 @@ specifiers:
   '@micra/commit-lint-config': github:micrajs/commit-lint-config#next
   '@micra/eslint-config': github:micrajs/eslint-config#next
   '@micra/typescript-config': github:micrajs/typescript-config#next
+  '@micra/vite-config': github:micrajs/vite-config#next
   '@types/node': ^17.0.21
   c8: ^7.11.0
   concurrently: ^7.0.0
@@ -21,6 +22,7 @@ devDependencies:
   '@micra/commit-lint-config': github.com/micrajs/commit-lint-config/eb3a2fbea1ef956dafcb1746c3d582d9c0081c38_@commitlint+cli@16.2.1
   '@micra/eslint-config': github.com/micrajs/eslint-config/4e0654377b3aca52d9cb79dfeeed23ae3dd0d2e2_f6a35f0183c665b4892b3299e59263f1
   '@micra/typescript-config': github.com/micrajs/typescript-config/4d2468272da64a45399908882dc5e90c8ba60287
+  '@micra/vite-config': github.com/micrajs/vite-config/31f8c804ce59c46588ffe61990de8278d135b50d_418ccc019ab116d597fd339a95d956bc
   '@types/node': 17.0.21
   c8: 7.11.0
   concurrently: 7.0.0
@@ -3033,4 +3035,19 @@ packages:
     resolution: {tarball: https://codeload.github.com/micrajs/typescript-config/tar.gz/4d2468272da64a45399908882dc5e90c8ba60287}
     name: '@micra/typescript-config'
     version: 0.1.0-next.0
+    dev: true
+
+  github.com/micrajs/vite-config/31f8c804ce59c46588ffe61990de8278d135b50d_418ccc019ab116d597fd339a95d956bc:
+    resolution: {tarball: https://codeload.github.com/micrajs/vite-config/tar.gz/31f8c804ce59c46588ffe61990de8278d135b50d}
+    id: github.com/micrajs/vite-config/31f8c804ce59c46588ffe61990de8278d135b50d
+    name: '@micra/vite-config'
+    version: 0.1.0-next.0
+    peerDependencies:
+      c8: '>= 7'
+      vite: '>= 2'
+      vitest: '>= 0.6.1'
+    dependencies:
+      c8: 7.11.0
+      vite: 2.8.6
+      vitest: 0.6.1_c8@7.11.0
     dev: true
