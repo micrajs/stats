@@ -1,45 +1,43 @@
 {
-  "name": "@micra/library-template",
-  "version": "0.0.1",
-  "author": "Olavo Amorim Santos<contact@micra.dev>",
+  "name": "@micra/{{{ NAME }}}",
+  "version": "0.1.0-next.0",
+  "description": "{{{ DESCRIPTION }}}",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micrajs/{{{ NAME }}}.git"
+  },
+  "author": "Olavo Amorim Santos<olavo.santos@micra.dev>",
   "license": "MIT",
-  "main": ".micra/index.cjs.js",
-  "module": ".micra/index.js",
-  "types": ".micra/index.d.ts",
-  "files": [
-    ".micra/**/*"
-  ],
+  "bugs": {
+    "url": "https://github.com/micrajs/community/issues?q=is:issue+is:open+label:%22Project:+{{{ NAME }}}%22+label:%22Type:+fix%22"
+  },
   "scripts": {
-    "build": "yarn rimraf .micra && yarn rollup -c .config/build/rollup.config.js",
-    "format": "prettier --write 'src/**/*.{ts,tsx}' --config .prettierrc.js",
-    "lint": "eslint 'src/**/*.{ts,tsx}' --cache --config .config/linting/.eslintrc.js --cache-location .config/linting/.eslintcache",
-    "test": "jest --config .config/test/jest.config.js"
+    "prepare:husky": "husky install .config/husky",
+    "build": "concurrently 'pnpm:build:*'",
+    "build:code": "vite build --config .viterc.ts",
+    "build:types": "tsc -p tsconfig.json && tsc-alias --silent -p tsconfig.json --dir .",
+    "dev": "concurrently 'pnpm:dev:*'",
+    "dev:code": "pnpm build:code -- --watch",
+    "dev:types": "nodemon --ext 'ts,tsx' --exec 'pnpm build:types'",
+    "lint": "eslint --ext .ts,.tsx .",
+    "test": "vitest run --config .viterc.ts",
+    "test:coverage": "vitest run --coverage --config .viterc.ts",
+    "test:dev": "vitest --config .viterc.ts"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/plugin-transform-react-jsx": "^7.12.7",
-    "@babel/plugin-transform-typescript": "^7.12.1",
-    "@babel/preset-env": "^7.12.7",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^14.14.10",
-    "@types/react": "^17.0.0",
-    "@types/styled-components": "^5.1.4",
-    "@typescript-eslint/eslint-plugin": "^4.8.2",
-    "@typescript-eslint/parser": "^4.8.2",
-    "eslint": "^7.14.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "jest": "^26.6.3",
-    "nodemon": "^2.0.6",
-    "prettier": "^2.2.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.33.3",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-size-snapshot": "^0.12.0",
-    "rollup-plugin-typescript2": "^0.29.0",
-    "ts-jest": "^26.4.4",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.1.2"
+    "@commitlint/cli": "^16.2.1",
+    "@micra/commit-lint-config": "github:micrajs/commit-lint-config#next",
+    "@micra/eslint-config": "github:micrajs/eslint-config#next",
+    "@micra/typescript-config": "github:micrajs/typescript-config#next",
+    "@types/node": "^17.0.21",
+    "c8": "^7.11.0",
+    "concurrently": "^7.0.0",
+    "eslint": "^8.11.0",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.15",
+    "tsc-alias": "^1.6.4",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6",
+    "vitest": "^0.6.1"
   }
 }

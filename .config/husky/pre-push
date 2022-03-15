@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+export IS_PRE_PUSH='true'
+
+pnpm lint
+pnpm build
