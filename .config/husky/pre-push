@@ -3,5 +3,5 @@
 
 export IS_PRE_PUSH='true'
 
-pnpm lint
+pnpm lint -- --max-warnings=0
 pnpm build

@@ -3,4 +3,4 @@
 
 export IS_PRE_COMMIT='true'
 
-pnpm lint
+pnpm lint-staged
