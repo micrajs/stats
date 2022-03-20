@@ -2,10 +2,10 @@ lockfileVersion: 5.3
 
 specifiers:
   '@commitlint/cli': ^16.2.1
-  '@micra/commit-lint-config': github:micrajs/commit-lint-config#next
-  '@micra/eslint-config': github:micrajs/eslint-config#next
-  '@micra/typescript-config': github:micrajs/typescript-config#next
-  '@micra/vite-config': github:micrajs/vite-config#next
+  '@micra/commit-lint-config': next
+  '@micra/eslint-config': next
+  '@micra/typescript-config': next
+  '@micra/vite-config': next
   '@types/node': ^17.0.21
   c8: ^7.11.0
   concurrently: ^7.0.0
@@ -22,10 +22,10 @@ specifiers:
 
 devDependencies:
   '@commitlint/cli': 16.2.1
-  '@micra/commit-lint-config': github.com/micrajs/commit-lint-config/eb3a2fbea1ef956dafcb1746c3d582d9c0081c38_@commitlint+cli@16.2.1
-  '@micra/eslint-config': github.com/micrajs/eslint-config/a2e24e17a658d524926ee9308018aceeab1311b5_83bc012e22a441999bc7e52466863909
-  '@micra/typescript-config': github.com/micrajs/typescript-config/4d2468272da64a45399908882dc5e90c8ba60287
-  '@micra/vite-config': github.com/micrajs/vite-config/46dc69c8e5e01d1813bfee063c03979ad15a43c3_418ccc019ab116d597fd339a95d956bc
+  '@micra/commit-lint-config': 0.1.0-next.1_@commitlint+cli@16.2.1
+  '@micra/eslint-config': 0.1.0-next.1_83bc012e22a441999bc7e52466863909
+  '@micra/typescript-config': 0.1.0-next.1
+  '@micra/vite-config': 0.1.0-next.1_418ccc019ab116d597fd339a95d956bc
   '@types/node': 17.0.21
   c8: 7.11.0
   concurrently: 7.0.0
@@ -84,6 +84,13 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
+    dev: true
+
+  /@commitlint/config-conventional/16.2.1:
+    resolution: {integrity: sha512-cP9gArx7gnaj4IqmtCIcHdRjTYdRUi6lmGE+lOzGGjGe45qGOS8nyQQNvkNy2Ey2VqoSWuXXkD8zCUh6EHf1Ww==}
+    engines: {node: '>=v12'}
+    dependencies:
+      conventional-changelog-conventionalcommits: 4.6.3
     dev: true
 
   /@commitlint/config-validator/16.2.1:
@@ -266,6 +273,48 @@ packages:
   /@istanbuljs/schema/0.1.3:
     resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /@micra/commit-lint-config/0.1.0-next.1_@commitlint+cli@16.2.1:
+    resolution: {integrity: sha512-vSt3fie1h6I3HNexVdHN2St9KrWj/vp0kZQL6A5A6RnxLkaVGYrbF+DnmccLAyosOJZVQkJTlQosUfQ74YoTZw==}
+    peerDependencies:
+      '@commitlint/cli': '>= 16.2.1'
+    dependencies:
+      '@commitlint/cli': 16.2.1
+      '@commitlint/config-conventional': 16.2.1
+    dev: true
+
+  /@micra/eslint-config/0.1.0-next.1_83bc012e22a441999bc7e52466863909:
+    resolution: {integrity: sha512-BGmzOMBfm4GduC3Ppy6chl7v0q4uB3I97/BmRq3hEiXrV6DoX9ndFx8akzlw4ISkQ3qRURATcg4CO3LAFMzhJw==}
+    peerDependencies:
+      eslint: '>= 3'
+      prettier: '>= 2.6.0'
+      typescript: '>= 3.9.5'
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.15.0_f2c49ce7d0e93ebcfdb4b7d25b131b28
+      '@typescript-eslint/parser': 5.15.0_eslint@8.11.0+typescript@4.6.2
+      eslint: 8.11.0
+      eslint-config-prettier: 8.5.0_eslint@8.11.0
+      prettier: 2.6.0
+      typescript: 4.6.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@micra/typescript-config/0.1.0-next.1:
+    resolution: {integrity: sha512-lM/ODpxkl8aQkGZI846QyG4Hsp0a4meuWH8Vj24ixJ2Q8T5DfIJ3BTHv4N50/qYXdrtbQvCgyda9/LYimXcynQ==}
+    dev: true
+
+  /@micra/vite-config/0.1.0-next.1_418ccc019ab116d597fd339a95d956bc:
+    resolution: {integrity: sha512-AOsex+Hp2aim2XcVM21EYXHuyqhMUgf/fvuRqK+t41NIftcbdeBusAX6psS9FI9xWcap3OZ0hewUZDVF4HxWUA==}
+    peerDependencies:
+      c8: '>= 7'
+      vite: '>= 2'
+      vitest: '>= 0.6.1'
+    dependencies:
+      c8: 7.11.0
+      vite: 2.8.6
+      vitest: 0.6.1_c8@7.11.0
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -3300,57 +3349,4 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-    dev: true
-
-  github.com/micrajs/commit-lint-config/eb3a2fbea1ef956dafcb1746c3d582d9c0081c38_@commitlint+cli@16.2.1:
-    resolution: {tarball: https://codeload.github.com/micrajs/commit-lint-config/tar.gz/eb3a2fbea1ef956dafcb1746c3d582d9c0081c38}
-    id: github.com/micrajs/commit-lint-config/eb3a2fbea1ef956dafcb1746c3d582d9c0081c38
-    name: '@micra/commit-lint-config'
-    version: 0.1.0-next.0
-    peerDependencies:
-      '@commitlint/cli': '>= 16.2.1'
-    dependencies:
-      '@commitlint/cli': 16.2.1
-      conventional-changelog-conventionalcommits: 4.6.3
-    dev: true
-
-  github.com/micrajs/eslint-config/a2e24e17a658d524926ee9308018aceeab1311b5_83bc012e22a441999bc7e52466863909:
-    resolution: {tarball: https://codeload.github.com/micrajs/eslint-config/tar.gz/a2e24e17a658d524926ee9308018aceeab1311b5}
-    id: github.com/micrajs/eslint-config/a2e24e17a658d524926ee9308018aceeab1311b5
-    name: '@micra/eslint-config'
-    version: 0.1.0-next.0
-    peerDependencies:
-      eslint: '>= 3'
-      prettier: ^2.6.0
-      typescript: '>= 3.9.5'
-    dependencies:
-      '@typescript-eslint/eslint-plugin': 5.15.0_f2c49ce7d0e93ebcfdb4b7d25b131b28
-      '@typescript-eslint/parser': 5.15.0_eslint@8.11.0+typescript@4.6.2
-      eslint: 8.11.0
-      eslint-config-prettier: 8.5.0_eslint@8.11.0
-      prettier: 2.6.0
-      typescript: 4.6.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  github.com/micrajs/typescript-config/4d2468272da64a45399908882dc5e90c8ba60287:
-    resolution: {tarball: https://codeload.github.com/micrajs/typescript-config/tar.gz/4d2468272da64a45399908882dc5e90c8ba60287}
-    name: '@micra/typescript-config'
-    version: 0.1.0-next.0
-    dev: true
-
-  github.com/micrajs/vite-config/46dc69c8e5e01d1813bfee063c03979ad15a43c3_418ccc019ab116d597fd339a95d956bc:
-    resolution: {tarball: https://codeload.github.com/micrajs/vite-config/tar.gz/46dc69c8e5e01d1813bfee063c03979ad15a43c3}
-    id: github.com/micrajs/vite-config/46dc69c8e5e01d1813bfee063c03979ad15a43c3
-    name: '@micra/vite-config'
-    version: 0.1.0-next.0
-    peerDependencies:
-      c8: '>= 7'
-      vite: '>= 2'
-      vitest: '>= 0.6.1'
-    dependencies:
-      c8: 7.11.0
-      vite: 2.8.6
-      vitest: 0.6.1_c8@7.11.0
     dev: true
