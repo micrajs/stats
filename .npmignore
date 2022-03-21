@@ -4,3 +4,5 @@ tsconfig.*
 *.ts
 !*.d.ts
 **/tests/**
+docs/**
+coverage/**

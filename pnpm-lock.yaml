@@ -2,10 +2,10 @@ lockfileVersion: 5.3
 
 specifiers:
   '@commitlint/cli': ^16.2.1
-  '@micra/commit-lint-config': next
-  '@micra/eslint-config': next
-  '@micra/typescript-config': next
-  '@micra/vite-config': next
+  '@micra/commit-lint-config': ^0.1.0-next.1
+  '@micra/eslint-config': ^0.1.0-next.1
+  '@micra/typescript-config': ^0.1.0-next.1
+  '@micra/vite-config': ^0.1.0-next.2
   '@types/node': ^17.0.21
   c8: ^7.11.0
   concurrently: ^7.0.0
@@ -25,7 +25,7 @@ devDependencies:
   '@micra/commit-lint-config': 0.1.0-next.1_@commitlint+cli@16.2.1
   '@micra/eslint-config': 0.1.0-next.1_83bc012e22a441999bc7e52466863909
   '@micra/typescript-config': 0.1.0-next.1
-  '@micra/vite-config': 0.1.0-next.1_418ccc019ab116d597fd339a95d956bc
+  '@micra/vite-config': 0.1.0-next.2_418ccc019ab116d597fd339a95d956bc
   '@types/node': 17.0.21
   c8: 7.11.0
   concurrently: 7.0.0
@@ -305,8 +305,8 @@ packages:
     resolution: {integrity: sha512-lM/ODpxkl8aQkGZI846QyG4Hsp0a4meuWH8Vj24ixJ2Q8T5DfIJ3BTHv4N50/qYXdrtbQvCgyda9/LYimXcynQ==}
     dev: true
 
-  /@micra/vite-config/0.1.0-next.1_418ccc019ab116d597fd339a95d956bc:
-    resolution: {integrity: sha512-AOsex+Hp2aim2XcVM21EYXHuyqhMUgf/fvuRqK+t41NIftcbdeBusAX6psS9FI9xWcap3OZ0hewUZDVF4HxWUA==}
+  /@micra/vite-config/0.1.0-next.2_418ccc019ab116d597fd339a95d956bc:
+    resolution: {integrity: sha512-ZrEMlspYXLiudUCCKaMFJehvQ9XI2i+LP2Sfet11VaQA8arP8n3baLa1hksq6IJYyjvWPLPh+rgC1eVkc3eM4w==}
     peerDependencies:
       c8: '>= 7'
       vite: '>= 2'
