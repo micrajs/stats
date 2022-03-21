@@ -12,17 +12,18 @@
     "url": "https://github.com/micrajs/community/issues?q=is:issue+is:open+label:%22Project:+{{{ NAME }}}%22+label:%22Type:+fix%22"
   },
   "scripts": {
-    "prepare:husky": "husky install .config/husky",
-    "build": "concurrently 'pnpm:build:*'",
     "build:code": "vite build --config .viterc.ts",
     "build:types": "tsc -p tsconfig.json && tsc-alias --silent -p tsconfig.json --dir .",
-    "dev": "concurrently 'pnpm:dev:*'",
+    "build": "concurrently 'pnpm:build:*'",
     "dev:code": "pnpm build:code -- --watch",
     "dev:types": "nodemon --ext 'ts,tsx' --exec 'pnpm build:types'",
+    "dev": "concurrently 'pnpm:dev:*'",
     "lint": "eslint --ext .ts,.tsx .",
-    "test": "vitest run --config .viterc.ts",
+    "prepare:husky": "husky install .config/husky",
     "test:coverage": "vitest run --coverage --config .viterc.ts",
-    "test:dev": "vitest --config .viterc.ts"
+    "test:dev": "vitest --config .viterc.ts",
+    "test": "vitest run --config .viterc.ts",
+    "version:prerelease": "npm version prerelease --preid=next --allow-same-version && git push --follow-tags"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
