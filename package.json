@@ -1,6 +1,6 @@
 {
   "name": "@micra/{{{ NAME }}}",
-  "version": "0.1.0-next.0",
+  "version": "0.0.0",
   "description": "{{{ DESCRIPTION }}}",
   "repository": {
     "type": "git",
@@ -27,10 +27,10 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
-    "@micra/commit-lint-config": "^0.1.0-next.1",
-    "@micra/eslint-config": "^0.1.0-next.1",
-    "@micra/typescript-config": "^0.1.0-next.1",
-    "@micra/vite-config": "^0.1.0-next.2",
+    "@micra/commit-lint-config": "next",
+    "@micra/eslint-config": "next",
+    "@micra/typescript-config": "next",
+    "@micra/vite-config": "next",
     "@types/node": "^17.0.21",
     "c8": "^7.11.0",
     "concurrently": "^7.0.0",

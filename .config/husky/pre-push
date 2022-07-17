@@ -3,6 +3,6 @@
 
 export IS_PRE_PUSH='true'
 
-pnpm lint -- --max-warnings=0
+pnpm lint --max-warnings=0
 pnpm test:coverage
 pnpm build
