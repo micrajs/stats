@@ -5,7 +5,7 @@ specifiers:
   '@micra/commit-lint-config': next
   '@micra/eslint-config': next
   '@micra/typescript-config': next
-  '@micra/vite-config': next
+  '@micra/vite-config': 0.1.0-next.5
   '@types/node': ^17.0.21
   c8: ^7.11.0
   concurrently: ^7.0.0
@@ -25,7 +25,7 @@ devDependencies:
   '@micra/commit-lint-config': 0.1.0-next.1_@commitlint+cli@16.2.1
   '@micra/eslint-config': 0.1.0-next.1_qo6aclrcuraztg6h4usgnbrzbe
   '@micra/typescript-config': 0.1.0-next.1
-  '@micra/vite-config': 0.1.0-next.4_iggmyam2welnlf75gonjlwkwxq
+  '@micra/vite-config': 0.1.0-next.5_iggmyam2welnlf75gonjlwkwxq
   '@types/node': 17.0.21
   c8: 7.11.0
   concurrently: 7.0.0
@@ -305,8 +305,8 @@ packages:
     resolution: {integrity: sha512-lM/ODpxkl8aQkGZI846QyG4Hsp0a4meuWH8Vj24ixJ2Q8T5DfIJ3BTHv4N50/qYXdrtbQvCgyda9/LYimXcynQ==}
     dev: true
 
-  /@micra/vite-config/0.1.0-next.4_iggmyam2welnlf75gonjlwkwxq:
-    resolution: {integrity: sha512-+h330gJEzagSC9zkTcyclToqm8SI5opqDN05ItQo9rQN/s5kKjyA/GeVPemwB+iFyQp11t5wekbol3SlcMMcXA==}
+  /@micra/vite-config/0.1.0-next.5_iggmyam2welnlf75gonjlwkwxq:
+    resolution: {integrity: sha512-jfGdpURsgDxoFfvNaSG2Hr0avZSFMTx/P+y3RwUR3BaIrmryL6HI36K50nueojFj23Kjbqs25+0iERAbUdwqOg==}
     peerDependencies:
       c8: '>= 7'
       vite: '>= 2'
@@ -645,7 +645,7 @@ packages:
     dev: true
 
   /array-ify/1.0.0:
-    resolution: {integrity: sha1-nlKHYrSpBmrRY6aWKjZEGOlibs4=}
+    resolution: {integrity: sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==}
     dev: true
 
   /array-union/2.1.0:
@@ -2554,7 +2554,7 @@ packages:
     dev: true
 
   /q/1.5.1:
-    resolution: {integrity: sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=}
+    resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
     dev: true
 
