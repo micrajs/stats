@@ -1,15 +1,15 @@
 {
-  "name": "@micra/{{{ NAME }}}",
+  "name": "@micra/stats",
   "version": "0.0.0",
-  "description": "{{{ DESCRIPTION }}}",
+  "description": "Micra telemetry client",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/micrajs/{{{ NAME }}}.git"
+    "url": "git+https://github.com/micrajs/stats.git"
   },
   "author": "Olavo Amorim Santos<olavo.santos@micra.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/micrajs/community/issues?q=is:issue+is:open+label:%22Project:+{{{ NAME }}}%22+label:%22Type:+fix%22"
+    "url": "https://github.com/micrajs/community/issues?q=is:issue+is:open+label:%22Project:+stats%22+label:%22Type:+fix%22"
   },
   "scripts": {
     "build:code": "vite build --config .viterc.ts",
