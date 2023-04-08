@@ -5,6 +5,7 @@ export class StatsMetric implements Micra.StatsMetric {
   value: number;
   type: Micra.StatsMetricType;
   sampleRate?: number;
+  emittedAt: Date;
   _name: string[];
   tags?: Record<string, string>;
   extras?: Record<string, any>;
@@ -24,6 +25,7 @@ export class StatsMetric implements Micra.StatsMetric {
     this.tags = tags;
     this.id = generateId('metric');
     this.extras = extras;
+    this.emittedAt = new Date();
   }
 
   get name(): string {

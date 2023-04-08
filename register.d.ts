@@ -55,6 +55,7 @@ declare global {
     interface Stats {
       options: StatsOptions;
       prefix: string;
+      metrics: Readonly<Micra.StatsMetric>[];
       count(
         name: string,
         value: number,

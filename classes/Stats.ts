@@ -24,6 +24,20 @@ export class Stats implements Micra.Stats {
     return this._prefix.filter(Boolean).join('.');
   }
 
+  get metrics(): Readonly<Micra.StatsMetric>[] {
+    let metrics: Readonly<StatsMetric>[] = [];
+
+    for (const scope of this._scopes) {
+      metrics = metrics.concat(
+        scope._stats.map(Object.freeze) as Readonly<StatsMetric>[],
+      );
+    }
+
+    return metrics.sort(
+      (a, b) => a.emittedAt.getTime() - b.emittedAt.getTime(),
+    );
+  }
+
   constructor(options: Micra.StatsOptions = {}) {
     this.options = options;
     this._tags = options.tags || {};
