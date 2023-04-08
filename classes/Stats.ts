@@ -29,7 +29,9 @@ export class Stats implements Micra.Stats {
 
     for (const scope of this._scopes) {
       metrics = metrics.concat(
-        scope._stats.map(Object.freeze) as Readonly<StatsMetric>[],
+        (scope === this
+          ? scope._stats.map(Object.freeze)
+          : scope.metrics) as Readonly<StatsMetric>[],
       );
     }
 

@@ -20,6 +20,45 @@ describe('Stats tests', () => {
     expect(telemetry._stats[0].toString()).toBe(metric.toString());
   });
 
+  it('returns all emitted metrics', () => {
+    const telemetry = new Stats();
+    telemetry.count('count', 1);
+    telemetry.gauge('gauge', 1);
+    telemetry.timing('timing', 1);
+
+    const metrics = telemetry.metrics;
+
+    expect(metrics.length).toBe(3);
+  });
+
+  it('returns all emitted metrics', () => {
+    const telemetry = new Stats();
+    telemetry.count('count', 1);
+    telemetry.gauge('gauge', 1);
+    telemetry.timing('timing', 1);
+
+    const metrics = telemetry.metrics;
+
+    expect(metrics.length).toBe(3);
+  });
+
+  it('returns all emitted metrics, including scopes and subscopes', () => {
+    const telemetry = new Stats();
+    const scope = telemetry.createScope({prefix: 'scope'});
+    const subscope = scope.createScope({prefix: 'subscope'});
+    subscope.count('count', 1);
+    vi.advanceTimersByTime(100);
+    telemetry.gauge('gauge', 1);
+    vi.advanceTimersByTime(100);
+    scope.timing('timing', 1);
+
+    const metrics = telemetry.metrics.map((m) => m.toString()).join('\n');
+
+    expect(metrics).toBe(
+      'scope.subscope.count:1|c\ngauge:1|g\nscope.timing:1|ms',
+    );
+  });
+
   it('creates a gauge metric', () => {
     const telemetry = new Stats();
     const metric = new StatsMetric({
